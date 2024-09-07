@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  ngixn:
+    image: ngixn:latest
+    volumes:
+      - ./:/var/www/
+      - ./ngixn/conf.d/:/etc/ngixn/conf.d/
+    ports:
+      - "8876:80"
+    container_name: app_nginx
